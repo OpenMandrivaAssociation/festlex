@@ -1,6 +1,6 @@
 %define name festlex
 %define version 1.4.3
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:  %name
 Summary: Voices for Festival - a free speech synthesizer 
@@ -76,5 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %_datadir/festival/dicts/cmu
 %doc festival/lib/dicts/cmu/COPYING
-
 
