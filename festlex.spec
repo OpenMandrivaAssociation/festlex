@@ -8,7 +8,6 @@ Version: %{version}
 Release: %release
 License: BSD
 Group: Sound
-BuildRoot: %{_tmppath}/%{name}-%{version}-root 
 URL: http://www.cstr.ed.ac.uk/projects/festival/
 BuildArch: noarch
 
