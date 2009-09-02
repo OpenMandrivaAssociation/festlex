@@ -1,6 +1,6 @@
 %define name festlex
 %define version 1.4.3
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name:  %name
 Summary: Voices for Festival - a free speech synthesizer 
