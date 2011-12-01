@@ -48,7 +48,7 @@ Requires:	festlex-POSLEX
 CMU dictionary in Festival form, required for American English voices.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %setup  -T -c -q -a 100 -a 101
 
@@ -59,13 +59,13 @@ rm -rf $RPM_BUILD_ROOT
 #cd ../../..
 
 %install
-mkdir -p $RPM_BUILD_ROOT%_datadir/festival
-cp -a festival/lib/dicts $RPM_BUILD_ROOT%_datadir/festival
+mkdir -p %{buildroot}%_datadir/festival
+cp -a festival/lib/dicts %{buildroot}%_datadir/festival
 
-rm -f $RPM_BUILD_ROOT/%{_datadir}/festival/dicts/COPYING.poslex
+rm -f %{buildroot}/%{_datadir}/festival/dicts/COPYING.poslex
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files POSLEX
 %defattr(-,root,root)
