@@ -48,7 +48,7 @@ Requires:	festlex-POSLEX
 CMU dictionary in Festival form, required for American English voices.
 
 %prep
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %setup  -T -c -q -a 100 -a 101
 
@@ -59,13 +59,13 @@ rm -rf %{buildroot}
 #cd ../../..
 
 %install
-mkdir -p %{buildroot}%_datadir/festival
-cp -a festival/lib/dicts %{buildroot}%_datadir/festival
+mkdir -p $RPM_BUILD_ROOT%_datadir/festival
+cp -a festival/lib/dicts $RPM_BUILD_ROOT%_datadir/festival
 
-rm -f %{buildroot}/%{_datadir}/festival/dicts/COPYING.poslex
+rm -f $RPM_BUILD_ROOT/%{_datadir}/festival/dicts/COPYING.poslex
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files POSLEX
 %defattr(-,root,root)
@@ -76,4 +76,50 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %_datadir/festival/dicts/cmu
 %doc festival/lib/dicts/cmu/COPYING
+
+
+
+%changelog
+* Tue May 03 2011 Oden Eriksson <oeriksson@mandriva.com> 1.4.3-9mdv2011.0
++ Revision: 664301
+- mass rebuild
+
+* Thu Dec 02 2010 Oden Eriksson <oeriksson@mandriva.com> 1.4.3-8mdv2011.0
++ Revision: 605123
+- rebuild
+
+* Tue Mar 16 2010 Oden Eriksson <oeriksson@mandriva.com> 1.4.3-7mdv2010.1
++ Revision: 521122
+- rebuilt for 2010.1
+
+* Wed Sep 02 2009 Christophe Fergeau <cfergeau@mandriva.com> 1.4.3-6mdv2010.0
++ Revision: 424432
+- rebuild
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 1.4.3-5mdv2009.0
++ Revision: 220788
+- rebuild
+
+* Sat Jan 12 2008 Thierry Vignaud <tv@mandriva.org> 1.4.3-4mdv2008.1
++ Revision: 149720
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Sep 19 2007 Adam Williamson <awilliamson@mandriva.org> 1.4.3-3mdv2008.0
++ Revision: 90204
+- rebuild for 2008
+
+
+* Wed Jan 31 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.4.3-2mdv2007.0
++ Revision: 115700
+- Import festlex
+
+* Wed Jan 31 2007 Götz Waschk <waschk@mandriva.org> 1.4.3-2mdv2007.1
+- rebuild
+
+* Sun Jan 08 2006 Mandriva Linux Team <http://www.mandrivaexpert.com/> 1.4.3-2mdk
+- Rebuild
 
