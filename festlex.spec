@@ -1,7 +1,7 @@
 Summary:	Voices for Festival - a free speech synthesizer 
 Name:		festlex
 Version:	1.4.3
-Release:	17
+Release:	18
 License:	BSD
 Group:		Sound
 Url:		http://www.cstr.ed.ac.uk/projects/festival/
