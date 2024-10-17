@@ -4,7 +4,7 @@ Version:	1.4.3
 Release:	20
 License:	BSD
 Group:		Sound
-Url:		http://www.cstr.ed.ac.uk/projects/festival/
+Url:		https://www.cstr.ed.ac.uk/projects/festival/
 ### DICTIONARIES
 # Generic English dictionary
 Source100:	ftp://ftp.cstr.ed.ac.uk/pub/festival/%{version}/festlex_POSLEX.tar.bz2
